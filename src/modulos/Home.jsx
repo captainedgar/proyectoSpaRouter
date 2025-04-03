@@ -33,7 +33,7 @@ function Home() {
     <div className='reyes-container'>
     {reyes.map((rey, index) =>(
   <div key={index} className='reyes'>
-    <img src={`${img}${rey.nombre.toLowerCase()}.png`} alt={rey.nombre} />
+    <img src={`${img}${rey.nombre.toLowerCase()}`} alt={rey.nombre} />
     <div>{rey.nombre}</div>
   </div>
 

@@ -29,14 +29,22 @@ function Nav() {
             vacasComidas:11
         }
       ]
+      
   return (
 
     <nav>
         <NavLink to='/'>Home</NavLink>
        {reyes.map((rey, index)=>(
         <div key={index}>
-        <NavLink to={`/${rey.nombre}`}>{rey.nombre}</NavLink>
+        <NavLink to={`/dato/${rey.nombre}`}>
+        <div>
+       
+        {rey.nombre}
+
         </div>
+        </NavLink>
+        </div>
+        
        ))}
     </nav>
   )
