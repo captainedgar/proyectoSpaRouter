@@ -17,6 +17,8 @@ function App() {
     
       <Route path="/" element={<Home />} />
       <Route path='/dato/:letra' element={<Dato/>}/>
+      
+   
       <Route path='*' element={<Error404/>}/>
     </Routes>
   </BrowserRouter>

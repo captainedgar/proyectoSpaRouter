@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {NavLink} from 'react-router-dom'
 function Home() {
     const img = 'https://www.html6.es/img/rey_';
     const reyes=[
@@ -30,16 +30,25 @@ function Home() {
         }
       ]
   return (
+    <>
+  
     <div className='reyes-container'>
+    
     {reyes.map((rey, index) =>(
   <div key={index} className='reyes'>
-    <img src={`${img}${rey.nombre.toLowerCase()}`} alt={rey.nombre} />
-    <div>{rey.nombre}</div>
+  <nav>
+   
+   
+   <NavLink to={`/dato/${rey.nombre}`}> <img src={`${img}${rey.nombre.toLowerCase()}`} alt={rey.nombre} />
+   <div>{rey.nombre}</div></NavLink>
+   </nav>
   </div>
 
     ))}
+    
     </div>
     
+    </>
   )
 }
 
